@@ -1,0 +1,13 @@
+
+cp -r /media/nvidia/<sd-name>/fewshot_jetson ~/
+cd ~/fewshot_jetson
+
+
+gst-launch-1.0 nvarguscamerasrc ! nvvidconv ! xvimagesink
+
+cd ~/fewshot_jetson
+ls
+
+python3 test_camera.py - Camera comment
+python3 test_model.py
+python3 app_camera.py
